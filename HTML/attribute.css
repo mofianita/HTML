@@ -1,0 +1,6 @@
+/*attribute selector*/
+a[target="_blank"] { background-color:black; } /*指定成 當target="_blank"時 才會有反白效果*/
+[class|="class"] { background-color:black; } /*'class'或是'class-'的開頭*/
+[class^="class"] { background-color:black; } /*開頭的字含'class'即可*/
+[class$="class"] { background-color:black; } /*結尾的字含'class'即可*/
+[class*=re]{ background-color:black; } /*整個class有含're'即可*/

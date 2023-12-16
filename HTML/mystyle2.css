@@ -1,0 +1,25 @@
+.way{
+	background-color:#72BEE4;
+	display:flex;
+}
+.left{
+	flex:1;
+}
+.right{
+	flex:1;
+}
+#email{
+	color:#8A8042;
+}
+#phone{
+	color:#8A8042;
+}
+#row1{
+	background-color:#9CC0D3;
+}
+#row2{
+	background-color:#B4C8D2;
+}
+table{
+	text-align:center;
+}

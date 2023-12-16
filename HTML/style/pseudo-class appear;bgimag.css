@@ -1,0 +1,21 @@
+p{
+	background-color: black;
+	color: white;
+	display:none;
+}
+div:hover p {	/*滑鼠碰到其他div裡面的東西時就會出現*/
+	display:block;
+}
+body {
+	background-image: url("../special/bubble.jpg");
+	background-repeat:no-repeat;
+	background-position:right top;
+	background-attachment:local;
+}
+div {
+	background:rgb(0,0,255); /*(紅,綠,藍)*/
+	opacity:0.25 /*opacity:0~1;0完全透明;1完全不透明 字以及背景都變淡*/
+}
+div {
+	background:rgba(0,0,255,0.25); /*只有背景變淡*/
+}

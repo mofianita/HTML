@@ -1,0 +1,5 @@
+/*pseudo-elements selector*/
+p::first-line { color:black; } /*p裡面的第一行*/
+p::first-letter{ color:black; } /*p裡面的第一個字*/
+::marker { color:black; } /*unoder跟order的前面符號*/
+::selection { background-color:black; } /*選取部分的文字產生反白時會出現指定的顏色或是效果*/

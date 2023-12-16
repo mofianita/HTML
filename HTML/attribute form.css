@@ -1,0 +1,14 @@
+input[type=text]{
+	width:300px;
+	display:block;
+	margin-bottom:40px;
+	background-color:green;
+	color:grey;
+}
+input[type=button]{ /*input跟form的name沒有關係*/
+	width:80px;
+	margin-left:200px;
+	display:block;
+	background-color:black;
+	color:yellow;
+}

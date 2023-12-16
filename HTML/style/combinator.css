@@ -1,0 +1,16 @@
+div p { /*div裡面的的全部的p*/
+	background-color:black;
+	color:white;
+}
+div>p { /*div的p的直接子元素*/
+	background-color:blue;
+	color:red;
+}
+div+p { /*div的下一個p*/
+	background-color:green;
+	color:yellow;
+}
+div~p{ /*div後面全部的p*/
+	background-color:pink;
+	color:grey;
+}

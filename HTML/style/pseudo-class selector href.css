@@ -1,0 +1,4 @@
+a:link { color:red; } /*未點選*/
+a:visited {color:yellow; } /*點選完*/
+a:hover {color:green;} /*滑鼠移動上去時*/
+a active {color:blue; } /*按下超連結時*/ 
