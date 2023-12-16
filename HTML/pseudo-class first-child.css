@@ -1,5 +1,0 @@
-/*pseudo-class selector*/
-p b:first-child { color:black; } /*p裡面的第一個b*/
-p:first-child p { color:black; } /*p裡面第一行的b*/
-p:first-child { color:black; } /*p裡面的第一行*/
- 

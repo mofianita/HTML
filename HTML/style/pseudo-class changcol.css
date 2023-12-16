@@ -1,7 +1,0 @@
-div{
-	background-color:white;
-	color:white;
-}
-div:hover { /*滑鼠碰到p時 p變色*/
-	background-color:green;
-}
