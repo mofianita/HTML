@@ -1,0 +1,11 @@
+table td{ /*第三小題*/
+        border:2px solid black;
+        border-collapse:collapse;
+        background-color:#9CC0D3;
+}
+td{
+        padding: 10px;
+}
+#firstline{
+        color:#8A8042;
+}
