@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>匯率轉換</title>
+                <meta charset="UTF-8">
+                <link rel="stylesheet" href="./mystyle.css">
+        </head>
+        <body>
+                <h2 id="firstline">匯率轉換</h2>
+                <h2>請輸入要轉換的金額(台幣):</h2>
+                <input id="dollar" type="number">
+                <button id="btu1" onclick="exchange()">提交</button>
+                <br>
+                <p id="show"></p>
+                <br>
+                <button id="btu2" onclick="reset()">重新載入</button>
+                <script>
+                        function reset(){ //第四小提
+                                location.reload();
+                        }
+                        function exchange(){ //第一小題
+                                const xhttp=new XMLHttpRequest();
+                                xhttp.onload=function(){
+                                        caculator(this);
+                                }
+                                xhttp.open("GET","./rate.xml");
+                                xhttp.send();
+                        }
+function caculator(xml){
+                                const xmlDoc=xml.responseXML;
+                                const x=xmlDoc.getElementsByTagName("RATE");
+                                const input=document.getElementById("dollar").value;
+                                let amoney;
+                                let umoney;
+                                let jmoney;
+                                let kmoney;
+                                let cmoney;
+
+                                if(input<=0){ //第五小提
+                                        alert('請輸入有效的數字!');
+						    reset();
+                                        return;
+                                }
+                                for(let i=0;i<x.length;i++){ //第二小題
+                                        let numa=x[i].getElementsByTagName("America")[0].childNodes[0].nodeValue;
+                                        amoney=numa*input;
+
+                                        let numu=x[i].getElementsByTagName("Europe")[0].childNodes[0].nodeValue;
+                                        umoney=numu*input;
+
+                                        let numj=x[i].getElementsByTagName("Japan")[0].childNodes[0].nodeValue;
+                                        jmoney=numj*input;
+
+                                        let numk=x[i].getElementsByTagName("Korean")[0].childNodes[0].nodeValue;
+                                        kmoney=numk*input;
+
+                                        let numc=x[i].getElementsByTagName("Macau")[0].childNodes[0].nodeValue;
+                                        cmoney=numc*input;
+                                }
+
+                                let table="<table>";
+                                table+="<tr><td>幣別</td><td>金額(轉換後)</td></tr>";
+                                table+="<tr><td>美元</td><td>" + amoney + "</td></tr>";
+                                table+="<tr><td>歐元</td><td>" + umoney + "</td></tr>";
+                                table+="<tr><td>日圓</td><td>" + jmoney + "</td></tr>";
+                                table+="<tr><td>韓圓</td><td>" + kmoney + "</td></tr>";
+                                table+="<tr><td>澳幣</td><td>" + cmoney + "</td></tr>";
+                                table+="</table>";
+
+                                document.getElementById("show").innerHTML=table;
+                        }
+
+                </script>
+        </body>
+</html>

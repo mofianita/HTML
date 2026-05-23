@@ -1,0 +1,30 @@
+tr:nth-child(even){ /*第三小題(偶數行)*/
+	background-color:#AD9076;
+	color:black;
+}
+table:nth-child(even) hover { /*第四小題hover*/
+	opacity:0.5;
+}
+
+tr:nth-child(odd){ /*第三小題(基數行)*/
+	background-color:#FFFAA8;
+	color:black;
+}
+
+a:link { color:#FADABC; } /*第六小題的未點選*/
+a:visited { color:#A99890; } /*第六小題的已點選*/
+a:hover { color:#DEB3A0; } /*第六小題的滑鼠在上面*/
+a:active { color:#847E7B; } /*第六小題的正在點選*/
+
+div p { /*第八小題的combinator*/
+	color:#83F2FF;
+}
+
+li[class^="00"] { /*第八小題的attribute*/
+	background-color:#318B73;
+	color:white;
+}
+	
+table {
+	width=70%;
+}
